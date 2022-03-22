@@ -25,6 +25,7 @@ steps:
 - script: |
     dir
     yarn
+    yarn
     yarn build
   displayName: 'yarn and yarn build'
 
