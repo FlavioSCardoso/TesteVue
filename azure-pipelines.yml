@@ -41,11 +41,11 @@ steps:
   inputs:
     rootFolderOrFile: '$(Build.SourcesDirectory)\dist'
 
-- task: CopyFiles@2
-  displayName: 'Copy Files - $(Build.SourcesDirectory) and $(Build.ArtifactStagingDirectory)'
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)\*.zip'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+# - task: CopyFiles@2
+#   displayName: 'Copy Files - $(Build.SourcesDirectory) and $(Build.ArtifactStagingDirectory)'
+#   inputs:
+#     SourceFolder: '$(Build.ArtifactStagingDirectory)\*.zip'
+#     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: vuetestresult'
