@@ -36,16 +36,16 @@ steps:
     rm .env
   displayName: 'Remove env file'
 
-- task: CopyFiles@2
-  displayName: 'Copy Files'
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)\\dist'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+# - task: CopyFiles@2
+#   displayName: 'Copy Files'
+#   inputs:
+#     SourceFolder: '$(Build.SourcesDirectory)\\dist'
+#     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: ArchiveFiles@2
   displayName: 'Archive $(Build.ArtifactStagingDirectory)'
   inputs:
-    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
+    rootFolderOrFile: '$(Build.ArtifactStagingDirectory)\\dist'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: vuetestresult'
