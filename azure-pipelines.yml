@@ -23,9 +23,9 @@ steps:
   displayName: 'create env file'
 
 - script: |
+    dir
     yarn
     yarn build
-    dir
   displayName: 'yarn and yarn build'
 
 - script: |
