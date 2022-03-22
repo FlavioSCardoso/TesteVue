@@ -27,6 +27,8 @@ steps:
   displayName: 'npm install and build'
 
 - script: |
+    pwd
+    dir
     rm .env
   displayName: 'Remove env file'
 
