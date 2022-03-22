@@ -23,11 +23,12 @@ steps:
   displayName: 'create env file'
 
 - script: |
-    dir
     yarn
-    yarn
+  displayName: 'yarn'
+
+- script: |
     yarn build
-  displayName: 'yarn and yarn build'
+  displayName: 'yarn build'
 
 - script: |
     pwd
