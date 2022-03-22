@@ -37,14 +37,14 @@ steps:
   displayName: 'Remove env file'
 
 - task: ArchiveFiles@2
-  displayName: 'Archive $(Build.SourcesDirectory)\\dist'
+  displayName: 'Archive $(Build.SourcesDirectory)\dist'
   inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)\\dist'
+    rootFolderOrFile: '$(Build.SourcesDirectory)\dist'
 
 - task: CopyFiles@2
   displayName: 'Copy Files'
   inputs:
-    SourceFolder: '$(Build.SourcesDirectory)\\dist\\*.zip'
+    SourceFolder: '$(Build.SourcesDirectory)\*.zip'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
