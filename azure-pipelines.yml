@@ -24,7 +24,8 @@ steps:
 - script: |
     yarn
     yarn build
-  displayName: 'npm install and build'
+    pwd
+  displayName: 'yarn and yarn build'
 
 - script: |
     pwd
